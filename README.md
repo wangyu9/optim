@@ -1,8 +1,8 @@
 `
-git clone -b master --single-branch https://github.com/kthohr/optim ./optim
-# build and install
+git clone -b master --single-branch https://github.com/wangyu9/optim ./optim
 cd ./optim
-./configure -i "/usr/local" -p
+mkdir build
+./configure -i "/media/ssd1/wangyu/WorkSpace/tool/liboptim" -p
 make
 make install
 `
