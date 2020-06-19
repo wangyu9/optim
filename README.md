@@ -1,3 +1,12 @@
+`
+git clone -b master --single-branch https://github.com/kthohr/optim ./optim
+# build and install
+cd ./optim
+./configure -i "/usr/local" -p
+make
+make install
+`
+
 # OptimLib &nbsp; [![Build Status](https://travis-ci.org/kthohr/optim.svg?branch=master)](https://travis-ci.org/kthohr/optim) [![Coverage Status](https://codecov.io/github/kthohr/optim/coverage.svg?branch=master)](https://codecov.io/github/kthohr/optim?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9fea40836c4c4d5fa3a29b5675b58f6e)](https://www.codacy.com/app/kthohr/optim?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kthohr/optim&amp;utm_campaign=Badge_Grade) [![License](https://img.shields.io/badge/Licence-Apache%202.0-blue.svg)](./LICENSE)
 
 OptimLib is a lightweight C++ library of numerical optimization methods for nonlinear functions.
