@@ -62,7 +62,7 @@ error_reporting(arma::vec& out_vals, const arma::vec& x_p, std::function<double 
         success = false;
     }
     //
-    if (settings_inp) {
+    if (settings_inp && false) { // wangyu get rid of this reporting. 
         settings_inp->opt_value = opt_objfn(x_p,nullptr,opt_data);
         settings_inp->opt_iter = iter;
         settings_inp->opt_err  = err;
