@@ -311,7 +311,8 @@ optim::gd_basic_int2(arma::vec& init_out_vals, std::function<double(const arma::
 
     uint_t iter = 0;
 
-    while (err > err_tol && iter < iter_max)
+    // while (err > err_tol && iter < iter_max) // wangyu
+    while (iter < iter_max)
     {
         iter++;
 
@@ -323,7 +324,7 @@ optim::gd_basic_int2(arma::vec& init_out_vals, std::function<double(const arma::
         x_p = x - d_p;
         grad = grad_p;
 
-        if (iter < iter_max - 1) // wangyu added it, since it is a waste of computing. 
+        if (iter <= iter_max - 1) // wangyu added it, since it is a waste of computing. // should use <= here since iter++!!
             box_objfn(x_p, &grad_p, opt_data);
 
         //
