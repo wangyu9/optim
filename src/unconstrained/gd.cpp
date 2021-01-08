@@ -323,7 +323,8 @@ optim::gd_basic_int2(arma::vec& init_out_vals, std::function<double(const arma::
         x_p = x - d_p;
         grad = grad_p;
 
-        box_objfn(x_p, &grad_p, opt_data);
+        if (iter < iter_max - 1) // wangyu added it, since it is a waste of computing. 
+            box_objfn(x_p, &grad_p, opt_data);
 
         //
 
