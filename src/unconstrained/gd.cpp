@@ -368,5 +368,5 @@ optimlib_inline
 bool
 optim::gd2(arma::vec& init_out_vals, std::function<double(const arma::vec& vals_inp, arma::vec* grad_out, void* opt_data)> opt_objfn, void* opt_data, algo_settings_t& settings)
 {
-    return gd_basic_int(init_out_vals, opt_objfn, opt_data, &settings);
+    return gd_basic_int2(init_out_vals, opt_objfn, opt_data, &settings);
 }
