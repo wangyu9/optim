@@ -342,6 +342,9 @@ optim::gd_basic_int2(arma::vec& init_out_vals, std::function<double(const arma::
 
     // wangyu get rid of it, since it calls opt_objfn an extra time
     // error_reporting(init_out_vals, x_p, opt_objfn, opt_data, success, err, err_tol, iter, iter_max, conv_failure_switch, settings_inp);
+    init_out_vals = x_p;
+    success = true;
+    // end of wangyu's change, just copy the value back
 
     //
 
